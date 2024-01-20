@@ -136,4 +136,7 @@ public class PathDemo {
 		fileDetails(normalizedDirectory);
 		fileDetails(fileCanonicalPath);
 	}
+
+	/** Prevent instantiating this static final class. */
+	private PathDemo() {}
 }

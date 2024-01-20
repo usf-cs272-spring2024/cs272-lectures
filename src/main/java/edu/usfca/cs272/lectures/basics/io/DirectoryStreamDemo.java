@@ -92,4 +92,7 @@ public class DirectoryStreamDemo {
 		Path path = Path.of("src", "main").normalize();
 		printListing(path);
 	}
+
+	/** Prevent instantiating this static final class. */
+	private DirectoryStreamDemo() {}
 }

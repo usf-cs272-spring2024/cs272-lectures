@@ -242,4 +242,7 @@ public class EliteFileConverter {
 	 * user to decide what to read from and write to, as well as decide what to do
 	 * if that argument was invalid.
 	 */
+
+	/** Prevent instantiating this static final class. */
+	private EliteFileConverter() {}
 }
