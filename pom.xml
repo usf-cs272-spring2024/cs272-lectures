@@ -28,8 +28,8 @@
 		<versions.commons.lang3>3.14.0</versions.commons.lang3>
 		<versions.commons.text>1.11.0</versions.commons.text>
 
-		<versions.jakarta.servlet>6.0.0</versions.jakarta.servlet>
-		<versions.eclipse.jetty>12.0.5</versions.eclipse.jetty>
+		<versions.jakarta.servlet>5.0.0</versions.jakarta.servlet>
+		<versions.eclipse.jetty>11.0.19</versions.eclipse.jetty>
 		<versions.mariadb.jdbc>3.3.2</versions.mariadb.jdbc>
 	</properties>
 
@@ -123,7 +123,7 @@
 
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-ee10-jetty-servlet</artifactId>
+			<artifactId>jetty-servlet</artifactId>
 			<version>${versions.eclipse.jetty}</version>
 		</dependency>
 
