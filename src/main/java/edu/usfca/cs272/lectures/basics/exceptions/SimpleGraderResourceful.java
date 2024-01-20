@@ -53,4 +53,7 @@ public class SimpleGraderResourceful {
 	 * outside of the try block, which helped catch our bug. And the console output
 	 * to the user is much more user-friendly!
 	 */
+
+	/** Prevent instantiating this static final class. */
+	private SimpleGraderResourceful() {}
 }

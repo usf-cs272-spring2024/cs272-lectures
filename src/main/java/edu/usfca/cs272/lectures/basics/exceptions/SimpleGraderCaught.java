@@ -71,4 +71,7 @@ public class SimpleGraderCaught {
 	 * we will have to make sure the close the scanner, and we still have a bug that
 	 * can throw an exception.
 	 */
+
+	/** Prevent instantiating this static final class. */
+	private SimpleGraderCaught() {}
 }

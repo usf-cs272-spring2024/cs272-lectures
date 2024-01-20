@@ -82,4 +82,7 @@ public class SimpleGrader {
 	 * results in a stack trace, which is only useful for the developer while
 	 * debugging (not the user ).
 	 */
+
+	/** Prevent instantiating this static final class. */
+	private SimpleGrader() {}
 }
