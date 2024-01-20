@@ -102,4 +102,8 @@ public class CollectionDemo {
 		parseLine(test2);
 		parseLine(test3);
 	}
+
+	/** Prevent instantiating this class of static methods. */
+	private CollectionDemo() {
+	}
 }

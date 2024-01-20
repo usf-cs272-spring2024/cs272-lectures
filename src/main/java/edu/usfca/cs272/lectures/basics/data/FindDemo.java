@@ -233,4 +233,8 @@ public class FindDemo {
 		setDemoTraditionalFor();
 		streamApproach();
 	}
+
+	/** Prevent instantiating this class of static methods. */
+	private FindDemo() {
+	}
 }

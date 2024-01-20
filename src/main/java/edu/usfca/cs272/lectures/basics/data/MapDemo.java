@@ -106,4 +106,8 @@ public class MapDemo {
 		System.out.println("TreeMap:");
 		demoMap(wordTreeMap, buffalo);
 	}
+
+	/** Prevent instantiating this class of static methods. */
+	private MapDemo() {
+	}
 }

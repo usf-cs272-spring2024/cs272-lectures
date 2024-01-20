@@ -69,4 +69,8 @@ public class MutableSetDemo {
 		 * the behavior may be unexpected!
 		 */
 	}
+
+	/** Prevent instantiating this class of static methods. */
+	private MutableSetDemo() {
+	}
 }

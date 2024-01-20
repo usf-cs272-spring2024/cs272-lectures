@@ -82,4 +82,8 @@ public class NestedMapDemo {
 			System.out.printf("%n");
 		}
 	}
+
+	/** Prevent instantiating this class of static methods. */
+	private NestedMapDemo() {
+	}
 }
