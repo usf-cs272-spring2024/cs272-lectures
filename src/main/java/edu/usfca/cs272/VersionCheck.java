@@ -53,6 +53,9 @@ public class VersionCheck {
 
 	/** Sealed class, available from Java 17+. */
 	public static sealed class Shape {
+		/** Constructs a new shape. */
+		public Shape() {}
+
 		/** Outputs a message. */
 		public void hello() {
 			System.out.println("Hi there!");
@@ -61,5 +64,10 @@ public class VersionCheck {
 
 	/** Sealed class, available from Java 17+. */
 	public static final class Circle extends Shape {
+		/** Constructs a new circle. */
+		public Circle() {}
 	}
+
+	/** Prevent instantiating this static final class. */
+	private VersionCheck() {}
 }
