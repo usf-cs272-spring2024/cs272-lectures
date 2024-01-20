@@ -72,6 +72,6 @@ public class SimpleGraderCaught {
 	 * can throw an exception.
 	 */
 
-	/** Prevent instantiating this static final class. */
+	/** Prevent instantiating this class of static methods. */
 	private SimpleGraderCaught() {}
 }

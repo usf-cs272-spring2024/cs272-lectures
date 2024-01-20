@@ -243,6 +243,6 @@ public class EliteFileConverter {
 	 * if that argument was invalid.
 	 */
 
-	/** Prevent instantiating this static final class. */
+	/** Prevent instantiating this class of static methods. */
 	private EliteFileConverter() {}
 }

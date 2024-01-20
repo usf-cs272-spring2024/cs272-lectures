@@ -67,6 +67,6 @@ public class SimpleGraderValidated {
 		System.out.println("[done]");
 	}
 
-	/** Prevent instantiating this static final class. */
+	/** Prevent instantiating this class of static methods. */
 	private SimpleGraderValidated() {}
 }

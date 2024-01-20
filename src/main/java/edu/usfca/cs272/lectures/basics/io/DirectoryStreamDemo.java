@@ -93,6 +93,6 @@ public class DirectoryStreamDemo {
 		printListing(path);
 	}
 
-	/** Prevent instantiating this static final class. */
+	/** Prevent instantiating this class of static methods. */
 	private DirectoryStreamDemo() {}
 }

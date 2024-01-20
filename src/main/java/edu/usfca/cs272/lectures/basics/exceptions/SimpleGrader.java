@@ -83,6 +83,6 @@ public class SimpleGrader {
 	 * debugging (not the user ).
 	 */
 
-	/** Prevent instantiating this static final class. */
+	/** Prevent instantiating this class of static methods. */
 	private SimpleGrader() {}
 }

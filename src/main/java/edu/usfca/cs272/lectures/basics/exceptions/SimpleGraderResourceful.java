@@ -54,6 +54,6 @@ public class SimpleGraderResourceful {
 	 * to the user is much more user-friendly!
 	 */
 
-	/** Prevent instantiating this static final class. */
+	/** Prevent instantiating this class of static methods. */
 	private SimpleGraderResourceful() {}
 }
