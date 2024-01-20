@@ -16,7 +16,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- plugin versions (must be exact) -->
-		<versions.maven.compiler>3.21.1</versions.maven.compiler>
+		<versions.maven.compiler>3.12.1</versions.maven.compiler>
 
 		<!-- dependency versions -->
 		<!-- https://maven.apache.org/pom.html#dependency-version-requirement-specification -->
