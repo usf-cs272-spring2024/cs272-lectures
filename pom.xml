@@ -7,7 +7,7 @@
 	<properties>
 		<!-- properties changed via command line -->
 		<config.werror>false</config.werror>
-		<config.xlint>-Xlint:all,-path,-processing</config.xlint>
+		<config.xlint>-Xlint:all,-path,-processing,-options</config.xlint>
 		<config.xdoclint>-Xdoclint:all/private</config.xdoclint>
 
 		<!-- project settings -->
@@ -44,6 +44,7 @@
 					<compilerArgs>
 						<arg>${config.xlint}</arg>
 						<arg>${config.xdoclint}</arg>
+						<arg>-Xdoclint/package:-edu.usfca.cs272.templates.*</arg>
 					</compilerArgs>
 
 					<failOnWarning>${config.werror}</failOnWarning>
