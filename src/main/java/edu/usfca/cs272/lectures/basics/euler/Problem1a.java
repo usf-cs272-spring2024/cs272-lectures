@@ -52,4 +52,7 @@ public class Problem1a {
 	 * No. You can call the main() function from other code since it is public, but
 	 * you cannot get the return value or change the parameters.
 	 */
+
+	/** Creates a new instance of this class. */
+	public Problem1a() {}
 }

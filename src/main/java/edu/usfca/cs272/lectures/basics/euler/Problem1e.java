@@ -99,4 +99,7 @@ public class Problem1e {
 	 * features in Java. We will slowly introduce these features throughout the
 	 * semester.
 	 */
+
+	/** Creates a new instance of this class. */
+	public Problem1e() {}
 }

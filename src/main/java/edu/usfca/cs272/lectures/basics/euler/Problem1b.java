@@ -48,4 +48,7 @@ public class Problem1b {
 	 * still uses a hard-coded value. It would be nice to make this method more
 	 * reusable and generalized as well!
 	 */
+
+	/** Creates a new instance of this class. */
+	public Problem1b() {}
 }

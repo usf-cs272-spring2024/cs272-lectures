@@ -135,4 +135,7 @@ public class Problem1d {
 	 * problem that is complex and large enough to warrant object-oriented design: a
 	 * search engine.
 	 */
+
+	/** Creates a new instance of this class. */
+	public Problem1d() {}
 }

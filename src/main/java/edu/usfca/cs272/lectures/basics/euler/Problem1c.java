@@ -81,4 +81,7 @@ public class Problem1c {
 	 * input, expect to have to add quite a bit of code to validate the input before
 	 * using it!
 	 */
+
+	/** Creates a new instance of this class. */
+	public Problem1c() {}
 }
