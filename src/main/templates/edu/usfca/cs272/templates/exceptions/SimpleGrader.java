@@ -1,4 +1,4 @@
-package edu.usfca.cs272.template.exceptions;
+package edu.usfca.cs272.templates.exceptions;
 
 import java.util.Scanner;
 
