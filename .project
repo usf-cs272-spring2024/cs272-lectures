@@ -7,11 +7,13 @@
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.jdt.core.javabuilder</name>
+			<triggers>full,incremental,</triggers>
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
 			<name>org.eclipse.m2e.core.maven2Builder</name>
+			<triggers>auto,full,incremental,</triggers>
 			<arguments>
 			</arguments>
 		</buildCommand>
