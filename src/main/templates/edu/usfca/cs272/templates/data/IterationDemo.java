@@ -3,7 +3,6 @@ package edu.usfca.cs272.templates.data;
 import java.util.LinkedList;
 import java.util.TreeMap;
 
-@SuppressWarnings("unused")
 public class IterationDemo {
 	private final TreeMap<Integer, LinkedList<String>> results;
 
