@@ -6,7 +6,6 @@ public class PrefixDemo {
 		PrefixMap map = new PrefixMap(2);
 
 		try {
-			map.addWords(words);
 			System.out.println(map);
 		}
 		catch (Exception e) {
