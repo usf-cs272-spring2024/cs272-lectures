@@ -1,4 +1,4 @@
-package edu.usfca.cs272.templates.io;
+package edu.usfca.cs272.templates.basics.io;
 
 import java.io.File;
 import java.io.IOException;
