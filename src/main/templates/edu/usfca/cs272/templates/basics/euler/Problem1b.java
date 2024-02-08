@@ -1,4 +1,4 @@
-package edu.usfca.cs272.templates.euler;
+package edu.usfca.cs272.templates.basics.euler;
 
 public class Problem1b {
 	public static int sumMultiples(int max) {

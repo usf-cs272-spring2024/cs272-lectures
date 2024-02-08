@@ -1,4 +1,4 @@
-package edu.usfca.cs272.templates.euler;
+package edu.usfca.cs272.templates.basics.euler;
 
 import java.util.Collection;
 import java.util.Set;
