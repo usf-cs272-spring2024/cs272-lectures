@@ -1,4 +1,4 @@
-package edu.usfca.cs272.templates.data;
+package edu.usfca.cs272.templates.basics.data;
 
 public class NestedMapDemo {
 

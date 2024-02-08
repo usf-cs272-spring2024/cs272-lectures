@@ -1,4 +1,4 @@
-package edu.usfca.cs272.templates.data;
+package edu.usfca.cs272.templates.basics.data;
 
 public class FindDemo {
 	private static final String[] animals = new String[] { "cow", "ape", "dog", "bee", "boa", "cat", "ant", "bat" };
