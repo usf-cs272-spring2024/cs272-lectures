@@ -1,4 +1,4 @@
-package edu.usfca.cs272.templates.basics.mutability;
+package edu.usfca.cs272.lectures.basics.mutability;
 
 import java.util.Arrays;
 import java.util.TreeSet;
@@ -7,7 +7,7 @@ import java.util.TreeSet;
  * Class with code used by the mutability quizzes.
  *
  * @author CS 272 Software Development (University of San Francisco)
- * @version Fall 2023
+ * @version Spring 2024
  */
 public class MutabilityQuizDemos {
 	/** Stores text. */
