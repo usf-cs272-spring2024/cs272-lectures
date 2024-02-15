@@ -39,3 +39,12 @@ The following classes from the [Java API](https://docs.oracle.com/en/java/javase
   - [System](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/System.html)
   - [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
   - [StringBuilder](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/StringBuilder.html)
+
+### HashCode Changes
+
+Compare how a **hash code** is defined in the following `Object` API descriptions:
+
+  - [Java SE 8](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--)
+  - [Java SE 11](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode())
+  - [Java SE 21](https://docs.oracle.com/en/java/javase/21/docs//api/java.base/java/lang/Object.html#hashCode())
+

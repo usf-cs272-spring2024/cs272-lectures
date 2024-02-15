@@ -50,6 +50,11 @@ public class ObjectDemo {
 		System.out.printf("%n");
 	}
 
+	// Compare these hashcode descriptions:
+	// https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--
+	// https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()
+	// https://docs.oracle.com/en/java/javase/21/docs//api/java.base/java/lang/Object.html#hashCode()
+
 	/**
 	 * This method demonstrates that arrays are also considered objects, and have
 	 * access to the methods in {@link Object}. The key here is to note that arrays
