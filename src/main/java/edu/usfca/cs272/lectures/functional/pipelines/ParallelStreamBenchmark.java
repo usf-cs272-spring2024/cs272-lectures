@@ -16,8 +16,6 @@ import java.util.TreeSet;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-import edu.usfca.cs272.templates.functional.pipelines.ParallelStreamBenchmark;
-
 /**
  * Demonstrates the impact parallel streams can make on runtime. Does not
  * demonstrate differences in memory use. Please note that benchmarking in Java
