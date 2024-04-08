@@ -122,6 +122,7 @@ public class HttpsFetcher {
 		Map<String, List<String>> results = new HashMap<>();
 
 		// first line will be the http status line (status code and description)
+		// null used by early Java versions (see
 		String line = response.readLine();
 		results.put(null, List.of(line));
 
@@ -164,21 +165,21 @@ public class HttpsFetcher {
 	public static Map<String, List<String>> fetch(HttpClient client, URI uri) throws IOException {
 		// create placeholder for results
 		Map<String, List<String>> results = new HashMap<>();
-	
+
 		// create GET request
 		HttpRequest request = HttpRequest.newBuilder()
 				.version(HttpClient.Version.HTTP_1_1)
 				.uri(uri)
 				.GET()
 				.build();
-	
+
 		// convert response body to stream of lines
 		BodyHandler<Stream<String>> handler = BodyHandlers.ofLines();
-	
+
 		try {
 			// synchronously get response
 			HttpResponse<Stream<String>> response = client.send(request, handler);
-	
+
 			// add content, status code, and headers
 			results.put("content", response.body().toList());
 			results.put(null, List.of(Integer.toString(response.statusCode())));
@@ -189,7 +190,7 @@ public class HttpsFetcher {
 			// just like our threaded code, it can get interrupted!
 			Thread.currentThread().interrupt();
 		}
-	
+
 		return results;
 	}
 
@@ -231,7 +232,7 @@ public class HttpsFetcher {
 		/*
 		 * The approaches differ in the following ways:
 		 *
-		 * 1) The HttpClient only returns the status or response code (the 3 digit
+		 * 1) The HttpClient only returns the response status code (the 3 digit
 		 * number, e.g. 404), but the socket returns the status line (including HTTP
 		 * version and reason text, e.g. HTTP/1.1 404 NOT FOUND). The HttpClient
 		 * supports HTTP/2, which only uses the code (without the reason text).
@@ -249,5 +250,18 @@ public class HttpsFetcher {
 		 * 4) The Socket version is easier to customize for efficient web crawling using
 		 * an existing thread pool and work queue.
 		 */
+
+		// older version of getting headers and content (for reference)
+		// note the null key for the response status and case of header field names
+
+//		URL url = URI.create(urls[0]).toURL();
+//		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//		connection.setRequestMethod("GET");
+//		connection.setInstanceFollowRedirects(false);
+//
+//		System.out.println(url);
+//		System.out.println(connection.getHeaderFields());
+//		System.out.println();
+//		connection.disconnect();
 	}
 }
