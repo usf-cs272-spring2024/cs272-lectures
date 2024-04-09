@@ -6,15 +6,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.MalformedURLException;
+import java.net.HttpURLConnection;
 import java.net.Socket;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.UnknownHostException;
 import java.net.http.HttpClient;
 import java.net.http.HttpClient.Redirect;
+import java.net.http.HttpHeaders;
 import java.net.http.HttpRequest;
+import java.net.http.HttpRequest.Builder;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandler;
 import java.net.http.HttpResponse.BodyHandlers;
@@ -44,6 +47,10 @@ public class HttpsFetcher {
 	 * @param uri the URI to fetch
 	 * @return a map with the headers and content
 	 * @throws IOException if unable to fetch headers and content
+	 *
+	 * @see #openConnection(URI)
+	 * @see #printGetRequest(PrintWriter, URI)
+	 * @see #processHttpHeaders(BufferedReader)
 	 */
 	public static Map<String, List<String>> fetch(URI uri) throws IOException {
 		try (
@@ -68,7 +75,7 @@ public class HttpsFetcher {
 
 	/**
 	 * Uses a {@link Socket} to open a connection to the web server associated with
-	 * the provided URL. Supports HTTP and HTTPS connections.
+	 * the provided URI. Supports HTTP and HTTPS connections.
 	 *
 	 * @param uri the URI to connect
 	 * @return a socket connection for that URI
@@ -76,6 +83,8 @@ public class HttpsFetcher {
 	 * @throws IOException if an I/O error occurs when creating the socket
 	 *
 	 * @see URL#openConnection()
+	 * @see URLConnection
+	 * @see HttpURLConnection
 	 */
 	public static Socket openConnection(URI uri) throws UnknownHostException, IOException {
 		String protocol = uri.getScheme();
@@ -93,8 +102,10 @@ public class HttpsFetcher {
 	 * Writes a simple HTTP v1.1 GET request to the provided socket writer.
 	 *
 	 * @param writer a writer created from a socket connection
-	 * @param uri the uri to fetch via the socket connection
+	 * @param uri the URI to fetch via the socket connection
 	 * @throws IOException if unable to write request to socket
+	 *
+	 * @see Builder#GET()
 	 */
 	public static void printGetRequest(PrintWriter writer, URI uri) throws IOException {
 		String host = uri.getHost();
@@ -117,6 +128,7 @@ public class HttpsFetcher {
 	 * @throws IOException if unable to read from socket
 	 *
 	 * @see URLConnection#getHeaderFields()
+	 * @see HttpHeaders#map()
 	 */
 	public static Map<String, List<String>> processHttpHeaders(BufferedReader response) throws IOException {
 		Map<String, List<String>> results = new HashMap<>();
@@ -141,15 +153,15 @@ public class HttpsFetcher {
 	/**
 	 * See {@link #fetch(URI)} for details.
 	 *
-	 * @param url the url to fetch
+	 * @param uri the URI to fetch
 	 * @return a map with the headers and content
-	 * @throws MalformedURLException if unable to convert String to URL
+	 * @throws URISyntaxException if unable to convert String to URI
 	 * @throws IOException if unable to fetch headers and content
 	 *
 	 * @see #fetch(URI)
 	 */
-	public static Map<String, List<String>> fetch(String url) throws MalformedURLException, IOException {
-		return fetch(URI.create(url));
+	public static Map<String, List<String>> fetch(String uri) throws URISyntaxException, IOException {
+		return fetch(new URI(uri));
 	}
 
 	/**
