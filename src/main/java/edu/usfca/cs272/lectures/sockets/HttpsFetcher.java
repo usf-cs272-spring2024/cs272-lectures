@@ -131,6 +131,7 @@ public class HttpsFetcher {
 			String[] split = line.split(":\\s+", 2);
 			assert split.length == 2;
 
+			split[0] = split[0].toLowerCase();
 			results.computeIfAbsent(split[0], x -> new ArrayList<>()).add(split[1]);
 		}
 
