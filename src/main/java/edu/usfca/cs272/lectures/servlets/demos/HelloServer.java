@@ -68,7 +68,7 @@ public class HelloServer {
 	 */
 	public static class HelloServlet extends HttpServlet {
 		/** Class version for serialization, in [YEAR][TERM] format (unused). */
-		private static final long serialVersionUID = 202308;
+		private static final long serialVersionUID = 202401;
 
 		/** The title to use for this webpage. */
 		private static final String TITLE = "Hello";

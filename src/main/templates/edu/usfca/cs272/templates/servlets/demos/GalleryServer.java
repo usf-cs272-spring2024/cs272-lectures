@@ -32,7 +32,7 @@ public class GalleryServer {
 	}
 
 	public static class GalleryServlet extends HttpServlet {
-		private static final long serialVersionUID = 202308;
+		private static final long serialVersionUID = 202401;
 		private static final String TITLE = "Gallery";
 
 		@Override
