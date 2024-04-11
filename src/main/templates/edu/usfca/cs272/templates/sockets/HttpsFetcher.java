@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.net.MalformedURLException;
 import java.net.Socket;
 import java.net.URI;
 import java.net.UnknownHostException;
@@ -43,7 +42,7 @@ public class HttpsFetcher {
 		return results;
 	}
 
-	public static Map<String, List<String>> fetch(String url) throws MalformedURLException, IOException {
+	public static Map<String, List<String>> fetch(String url) throws IOException {
 		return fetch(URI.create(url));
 	}
 
