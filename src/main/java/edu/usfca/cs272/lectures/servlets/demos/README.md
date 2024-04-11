@@ -1,4 +1,4 @@
-Servlet Basics
+Servlets - Demos
 =================================================
 
 These demos illustrate basic concepts related to creating dynamic websites using Java servlets and embedded Jetty.
