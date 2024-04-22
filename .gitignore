@@ -1,6 +1,7 @@
 # CS 272 ignored files
 out/
 src/main/templates/**/live
+*.properties
 
 # https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
 .metadata
